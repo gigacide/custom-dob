@@ -1,0 +1,9 @@
+before_script:
+    - git --version
+    - node --version
+    - npm --version
+    - npm install --ignore-scripts
+
+Build:
+    script:
+        - npm run make --silent
