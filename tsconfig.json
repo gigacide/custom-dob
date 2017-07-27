@@ -6,13 +6,11 @@
         "moduleResolution": "node",
         "newLine": "LF",
         "outDir": "./dist/",
-        "declaration": true,
         "strict": true,
-        "experimentalDecorators": true,
-        "skipLibCheck": true,
-        "sourceMap": true
+        "experimentalDecorators": true
     },
     "include": [
+        "./types/**/*.ts",
         "./src/**/*.ts"
     ]
 }

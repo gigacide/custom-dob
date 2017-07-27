@@ -1,6 +1,5 @@
 import { ICON } from "./icon";
 
-/** These constant values are defined through webpack. */
 declare const PACKAGE_NAME: string;
 declare const PACKAGE_VERSION: string;
 
