@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "description": "Boilerplate for creating providers for Tripetto Forms.",
   "license": "UNLICENSED",
-  "private": false,
+  "private": true,
   "homepage": "https://git.marblecore.com/tripetto/forms/providers/boilerplate",
   "author": {
     "name": "Mark van den Brink",
