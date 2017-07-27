@@ -20,11 +20,6 @@
   },
   "main": "dist/index.js",
   "types": "types/index.d.ts",
-  "tripetto": {
-    "providers": [
-      "."
-    ]
-  },
   "scripts": {
     "update": "shx rm -rf ./node_modules/@tripetto ./package-lock.json && npm install --ignore-scripts",
     "clean": "shx rm -rf ./dist/*",
@@ -47,5 +42,10 @@
     "typescript": "^2.4.2",
     "webpack": "^3.4.1",
     "webpack-livereload-plugin": "^0.11.0"
+  },
+  "tripetto": {
+    "providers": [
+      "."
+    ]
   }
 }
