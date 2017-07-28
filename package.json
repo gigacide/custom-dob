@@ -21,6 +21,7 @@
   "main": "dist/index.js",
   "types": "types/index.d.ts",
   "scripts": {
+    "start": "npm test",
     "update": "shx rm -rf ./node_modules/@tripetto ./package-lock.json && npm install --ignore-scripts",
     "clean": "shx rm -rf ./dist/*",
     "format": "prettier --tab-width 4 --print-width 140 --write \"src/**/*.ts\" \"types/**/*.ts\"",
