@@ -11,7 +11,7 @@ export class Provider extends Tripetto.NodeProvider<IProvider> {
     public readonly Type = Provider;
 
     /** Invoked when slots for this provider should be defined. */
-    protected OnSlots(): void {
+    public OnSlots(): void {
         // Prepare your data slots here...
     }
 
