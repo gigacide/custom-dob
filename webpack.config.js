@@ -21,7 +21,7 @@ module.exports = {
         extensions: [".ts", ".js"]
     },
     externals: {
-        "@tripetto/forms": "Tripetto"
+        "@tripetto/forms-editor": "Tripetto"
     },
     plugins: [
         new webpack.DefinePlugin({

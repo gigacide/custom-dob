@@ -1,4 +1,4 @@
-import * as Tripetto from "@tripetto/forms";
+import * as Tripetto from "@tripetto/forms-editor";
 import { Package } from "./package";
 import { IProvider } from "../types";
 
