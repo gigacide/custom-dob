@@ -16,9 +16,9 @@ export class Provider extends Tripetto.NodeProvider<IProvider> {
     }
 
     /** Invoked when the properties editor is requested. */
-    public OnProperties(pProperties: Tripetto.UI.Properties.PropertyCards): void {
-        Tripetto.UI.Features.Static.General(pProperties);
-        Tripetto.UI.Features.Name(this, pProperties);
+    public OnProperties(properties: Tripetto.UI.Properties.PropertyCards): void {
+        Tripetto.UI.Features.Static.General(properties);
+        Tripetto.UI.Features.Name(this, properties);
     }
 
     /** If your providers supports conditions, return the create templates here. */
