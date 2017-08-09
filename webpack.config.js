@@ -12,8 +12,14 @@ module.exports = {
         rules: [
             {
                 test: /\.ts$/,
-                exclude: /node_modules/,
                 use: "ts-loader"
+            },
+            {
+                test: /\.svg$/,
+                use: [
+                    "url-loader",
+                    "image-webpack-loader?{svgo:{plugins:[{cleanupAttrs: true},{removeDoctype: true},{removeXMLProcInst: true},{removeComments: true},{removeMetadata: true},{removeTitle: true},{removeDesc:{removeAny: true}}]}}"
+                ]
             }
         ]
     },
