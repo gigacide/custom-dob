@@ -1,4 +1,4 @@
-import * as Tripetto from "@tripetto/forms-editor";
+import { INodeProvider } from "@tripetto/forms-editor";
 
 /** Specifies the provider properties. */
-export interface IProvider extends Tripetto.INodeProvider {}
+export interface IProvider extends INodeProvider {}

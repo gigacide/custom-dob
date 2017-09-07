@@ -1,5 +1,4 @@
 const webpack = require("webpack");
-const path = require("path");
 const webpackLiveReload = require("webpack-livereload-plugin");
 const package = require("./package.json");
 

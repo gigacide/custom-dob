@@ -16,4 +16,5 @@
 /node_modules
 
 # Project specific
+/dist
 /forms
