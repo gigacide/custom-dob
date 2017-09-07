@@ -29,7 +29,7 @@
     "test": "webpack -d && concurrently -n \"tripetto,webpack\" -c \"blue.bold,green\" -k -s \"first\" \"tripetto ./forms/example.json\" \"webpack -d --watch\"",
     "build": "npm run clean && npm run format && npm run lint && webpack -p",
     "make": "npm run update && npm run build",
-    "version": "npm run make && git add -A ./dist",
+    "version": "npm run make",
     "postversion": "npm publish && git push --follow-tags"
   },
   "devDependencies": {
