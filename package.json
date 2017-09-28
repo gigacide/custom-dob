@@ -22,29 +22,27 @@
   "types": "types/index.d.ts",
   "scripts": {
     "start": "npm test",
-    "update": "shx rm -rf ./node_modules/@tripetto ./package-lock.json && npm install --ignore-scripts",
     "clean": "shx rm -rf ./dist/*",
     "format": "prettier --tab-width 4 --print-width 140 --write \"src/**/*.ts\" \"types/**/*.ts\"",
     "lint": "tslint -c ./tslint.json ./src/**/*.ts ./types/**/*.ts",
     "test": "webpack -d && concurrently -n \"tripetto,webpack\" -c \"blue.bold,green\" -k -s \"first\" \"tripetto ./forms/example.json\" \"webpack -d --watch\"",
-    "build": "npm run clean && npm run format && npm run lint && webpack -p",
-    "make": "npm run update && npm run build",
+    "make": "npm run clean && npm run format && npm run lint && webpack -p",
     "version": "npm run make",
     "postversion": "npm publish && git push --follow-tags"
   },
   "devDependencies": {
-    "@marblecore/tslint-configuration": "^5.5.1",
-    "@tripetto/forms-editor": "git+ssh://git@git.marblecore.com:tripetto/forms/editor.git",
+    "@marblecore/tslint-configuration": "^5.7.0",
+    "@tripetto/forms-editor": "^0.0.1",
     "concurrently": "^3.5.0",
-    "image-webpack-loader": "^3.3.1",
-    "prettier": "^1.5.3",
+    "image-webpack-loader": "^3.4.2",
+    "prettier": "^1.7.2",
     "shx": "^0.2.2",
-    "ts-loader": "^2.3.2",
-    "tslint": "^5.6.0",
-    "typescript": "^2.4.2",
+    "ts-loader": "^2.3.7",
+    "tslint": "^5.7.0",
+    "typescript": "^2.5.3",
     "url-loader": "^0.5.9",
-    "webpack": "^3.5.2",
-    "webpack-livereload-plugin": "^0.11.0"
+    "webpack": "^3.6.0",
+    "webpack-livereload-plugin": "^1.0.0"
   },
   "tripetto": {
     "providers": [
