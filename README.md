@@ -23,9 +23,9 @@ $ npm install
 $ npm test
 ```
 
-This command will start the editor server and tries to open the URL `http://localhost:8888` in your default browser. If no browser opens, just open the browser of your choice and navigate to this [URL](http://localhost:8888).
+This command will start the local editor server and tries to open the URL `http://localhost:8888` in your default browser. If no browser opens, just open the browser of your choice and navigate to this [URL](http://localhost:8888). By default the [form definition](https://forms.tripetto.community/editor/#definitions) `./forms/example.json` is loaded.
 
-Next, start your editor/IDE and start working on your provider. When a change is detected, the provider is automatically re-compiled and the Tripetto Forms editor in the browser refreshed.
+Next, open your editor/IDE and start working on your provider. When a change is detected, the provider is automatically re-compiled and the Tripetto Forms editor in the browser refreshed.
 
 # Documentation
 The complete Tripetto Forms documentation can be found at: [https://forms.tripetto.community](https://forms.tripetto.community).
