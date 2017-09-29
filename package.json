@@ -3,9 +3,9 @@
   "title": "Tripetto Forms Provider Boilerplate",
   "version": "1.0.0",
   "description": "Boilerplate for creating providers for Tripetto Forms.",
-  "license": "UNLICENSED",
+  "license": "MIT",
   "private": true,
-  "homepage": "https://git.marblecore.com/tripetto/forms/providers/boilerplate",
+  "homepage": "https://gitlab.com/tripetto/forms/providers/boilerplate",
   "author": {
     "name": "Mark van den Brink",
     "email": "mark@vandenbr.ink",
@@ -13,10 +13,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://git.marblecore.com/tripetto/forms/providers/boilerplate.git"
+    "url": "https://gitlab.com/tripetto/forms/providers/boilerplate.git"
   },
   "bugs": {
-    "url": "https://git.marblecore.com/tripetto/forms/providers/boilerplate/issues"
+    "url": "https://gitlab.com/tripetto/forms/providers/boilerplate/issues"
   },
   "main": "dist/index.js",
   "types": "types/index.d.ts",
@@ -32,7 +32,7 @@
   },
   "devDependencies": {
     "@marblecore/tslint-configuration": "^5.7.0",
-    "@tripetto/forms-editor": "^0.0.1",
+    "@tripetto/forms-editor": "^0.0.2",
     "concurrently": "^3.5.0",
     "image-webpack-loader": "^3.4.2",
     "prettier": "^1.7.2",
