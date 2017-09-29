@@ -1,9 +1,10 @@
+image: node:alpine
+
 before_script:
-    - git --version
     - node --version
     - npm --version
-    - npm install --ignore-scripts
+    - npm install
 
-Build:
+test:
     script:
         - npm run make --silent
