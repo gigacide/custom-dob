@@ -8,7 +8,7 @@ Tripetto Forms bring a new way of creating and deploying forms in websites and a
 Perhaps one of the best things about Tripetto Forms is that you can create your own providers. A typical provider implements a certain form building block and allows for the management of its properties through the editor. This boilerplate shows you how to do that.
 
 # Instructions
-1. [Download](https://gitlab.com/tripetto/forms/providers/boilerplate/repository/master/archive.zip) or clone this repository to your local machine:
+1. [Download](https://gitlab.com/tripetto/forms/providers/boilerplate/repository/master/archive.zip) or clone the [repository](https://gitlab.com/tripetto/forms/providers/boilerplate) to your local machine:
 ```bash
 $ git clone git@gitlab.com:tripetto/forms/providers/boilerplate.git
 ```
