@@ -17,3 +17,6 @@
 
 # Project specific
 /dist
+
+# Ignore the lock file (remove this from your provider implementation)
+package-lock.json
