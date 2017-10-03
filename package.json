@@ -47,6 +47,7 @@
   "tripetto": {
     "providers": [
       "."
-    ]
+    ],
+    "noFurtherLoading": true
   }
 }
