@@ -1,7 +1,7 @@
 [![pipeline status](https://gitlab.com/tripetto/forms/providers/boilerplate/badges/master/pipeline.svg)](https://gitlab.com/tripetto/forms/providers/boilerplate/commits/master)
 [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 [![docs](https://img.shields.io/badge/docs-website-blue.svg)](https://forms.tripetto.community/providers)
-[![chat](https://img.shields.io/gitter/room/nwjs/nw.js.svg)](https://gitter.im/tripetto/forms)
+[![Join the community on Spectrum](https://withspectrum.github.io/badge/badge.svg)](https://spectrum.chat/tripetto)
 
 **Boilerplate for creating a simple provider for [Tripetto Forms editor](https://www.npmjs.com/package/@tripetto/forms-editor).**
 
