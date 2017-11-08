@@ -1,30 +1,28 @@
 {
-    "Id": "ad503e9e49a567450bbd9ed3c45dffdb4fa345229b72c672ab7b00af0f726841",
-    "Name": "",
-    "Clusters": [
+  "Id": "ad503e9e49a567450bbd9ed3c45dffdb4fa345229b72c672ab7b00af0f726841",
+  "Name": "",
+  "Clusters": [
+    {
+      "Id": "e4f3f591c6c6c7a57cde67eee88fce215243dc774036ed38b08957e042f88f1a",
+      "Name": "",
+      "Nodes": [
         {
-            "Id": "e4f3f591c6c6c7a57cde67eee88fce215243dc774036ed38b08957e042f88f1a",
-            "Name": "",
-            "Nodes": [
-                {
-                    "Id": "aeccfab031de62419e719777a75788972b5286fc0dff9abf6bc6b6ff2ca5137e",
-                    "Explanation": "",
-                    "Name": "",
-                    "NameVisible": true,
-                    "Placeholder": "",
-                    "Description": "",
-                    "Branches": [],
-                    "Provider": {
-                        "Type": "tripetto-forms-boilerplate",
-                        "Version": "1.0.0"
-                    },
-                    "Slots": []
-                }
-            ]
+          "Id":
+            "aeccfab031de62419e719777a75788972b5286fc0dff9abf6bc6b6ff2ca5137e",
+          "Explanation": "",
+          "Name": "",
+          "NameVisible": true,
+          "Placeholder": "",
+          "Description": "",
+          "Branches": [],
+          "Provider": {
+            "Type": "tripetto-forms-boilerplate",
+            "Version": "1.0.0"
+          },
+          "Slots": []
         }
-    ],
-    "Editor": {
-        "Name": "@tripetto/forms-editor",
-        "Version": "0.0.2"
+      ]
     }
+  ],
+  "Editor": { "Name": "@tripetto/forms-editor", "Version": "0.1.10" }
 }
