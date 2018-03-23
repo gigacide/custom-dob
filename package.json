@@ -45,6 +45,7 @@
     "webpack-livereload-plugin": "^1.0.0"
   },
   "tripetto": {
+    "translations": "./translations/",
     "providers": [
       "."
     ],

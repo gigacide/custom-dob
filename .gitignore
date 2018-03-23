@@ -17,6 +17,8 @@
 
 # Project specific
 /dist
+/translations/*.json
+/translations/*.mo
 
 # Ignore the lock file (remove this from your provider implementation)
 package-lock.json

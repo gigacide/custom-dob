@@ -2,3 +2,4 @@
 !/dist/**/*.js
 !/dist/**/*.d.ts
 !/types/**/*.d.ts
+!/translations/*.json
