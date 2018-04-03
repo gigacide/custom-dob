@@ -1,10 +1,18 @@
-image: node:alpine
+image: node:latest
 
 before_script:
     - node --version
     - npm --version
-    - npm install
+    - npm ci || npm install
 
-test:
+stages:
+    - pack
+
+package:
+    stage: pack
     script:
-        - npm run make --silent
+        - npm run make
+        - npm pack
+    artifacts:
+        paths:
+            - "*.tgz"
