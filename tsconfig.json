@@ -3,12 +3,11 @@
     "compilerOptions": {
         "target": "ES5",
         "module": "commonjs",
-        "moduleResolution": "node",
         "newLine": "LF",
-        "outDir": "./dist/",
         "strict": true,
         "experimentalDecorators": true,
-        "skipLibCheck": true
+        "skipLibCheck": true,
+        "noEmit": true
     },
     "include": [
         "./types/**/*.ts",

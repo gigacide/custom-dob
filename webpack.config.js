@@ -1,17 +1,24 @@
 const webpack = require("webpack");
 const webpackLiveReload = require("webpack-livereload-plugin");
+const path = require("path");
 const package = require("./package.json");
 
 module.exports = {
     entry: "./src/index.ts",
     output: {
-        filename: "./dist/index.js"
+        filename: "main.js",
+        path: path.resolve(__dirname, "dist")
     },
     module: {
         rules: [
             {
                 test: /\.ts$/,
-                use: "ts-loader"
+                loader: "ts-loader",
+                options: {
+                    compilerOptions: {
+                        noEmit: false
+                    }
+                }
             },
             {
                 test: /\.svg$/,

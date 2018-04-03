@@ -18,34 +18,34 @@
   "bugs": {
     "url": "https://gitlab.com/tripetto/forms/providers/boilerplate/issues"
   },
-  "main": "dist/index.js",
+  "main": "dist/main.js",
   "types": "types/index.d.ts",
   "scripts": {
     "start": "npm test",
     "clean": "shx rm -rf ./dist/*",
     "format": "prettier --tab-width 4 --print-width 140 --write \"src/**/*.ts\" \"types/**/*.ts\"",
     "lint": "tslint -c ./tslint.json ./src/**/*.ts ./types/**/*.ts",
-    "test": "webpack -d && concurrently -n \"tripetto,webpack\" -c \"blue.bold,green\" -k -s \"first\" \"tripetto ./forms/example.json\" \"webpack -d --watch\"",
-    "make": "npm run clean && npm run format && npm run lint && webpack -p",
+    "test": "webpack --mode development && concurrently -n \"tripetto,webpack\" -c \"blue.bold,green\" -k -s \"first\" \"tripetto ./forms/example.json\" \"webpack --mode development --watch\"",
+    "make": "npm run clean && npm run format && npm run lint && webpack --mode production",
     "version": "npm run make",
     "postversion": "npm publish && git push --follow-tags"
   },
   "devDependencies": {
-    "@marblecore/tslint-configuration": "^5.7.0",
+    "@marblecore/tslint-configuration": "^5.9.0",
     "@tripetto/forms-editor": "*",
-    "concurrently": "^3.5.0",
-    "image-webpack-loader": "^3.4.2",
-    "prettier": "^1.8.1",
+    "concurrently": "^3.5.1",
+    "image-webpack-loader": "^4.2.0",
+    "prettier": "^1.11.1",
     "shx": "^0.2.2",
-    "ts-loader": "^3.1.1",
-    "tslint": "^5.8.0",
-    "typescript": "^2.6.1",
-    "url-loader": "^0.6.2",
-    "webpack": "^3.8.1",
-    "webpack-livereload-plugin": "^1.0.0"
+    "ts-loader": "^4.1.0",
+    "tslint": "^5.9.1",
+    "typescript": "^2.8.1",
+    "url-loader": "^1.0.1",
+    "webpack": "^4.4.1",
+    "webpack-cli": "^2.0.13",
+    "webpack-livereload-plugin": "^2.1.1"
   },
   "tripetto": {
-    "translations": "./translations/",
     "providers": [
       "."
     ],
