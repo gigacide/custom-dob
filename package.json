@@ -3,6 +3,11 @@
   "title": "Tripetto Forms Provider Boilerplate",
   "version": "1.0.0",
   "description": "Boilerplate for creating providers for Tripetto Forms.",
+  "keywords": [
+    "tripetto forms",
+    "tripetto forms editor",
+    "tripetto forms provider"
+  ],
   "license": "MIT",
   "private": true,
   "homepage": "https://gitlab.com/tripetto/forms/providers/boilerplate",
