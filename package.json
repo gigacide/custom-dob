@@ -35,7 +35,11 @@
     "translations:po2json": "shx rm -rf ./translations/*.json && node ./scripts/po2json.js",
     "make": "npm run clean && npm run format && npm run lint && npm run translations:po2json && webpack --mode production",
     "version": "npm run make",
-    "postversion": "npm publish && git push --follow-tags"
+    "postversion": "git push --follow-tags",
+    "publish-prerelease": "npm version prerelease && npm publish --tag next",
+    "publish-patch": "npm version patch && npm publish",
+    "publish-minor": "npm version minor && npm publish",
+    "publish-major": "npm version major && npm publish"
   },
   "devDependencies": {
     "@marblecore/tslint-configuration": "^5.9.0",
