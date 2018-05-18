@@ -1,6 +1,6 @@
 ![Tripetto](https://docs.tripetto.community/assets/header.svg)
 
-Tripetto is a full-fledged form kit. Rapidly create and deploy smart flowing forms and surveys. Drop the kit in your codebase and use all of it, or just the parts you need. Take the visual [**editor**](https://www.npmjs.com/package/tripetto) for form creation, the [**collector**](https://www.npmjs.com/package/tripetto-collector) for response collection and the [**SDK**](https://docs.tripetto.community/blocks) for developing more form building blocks.
+Tripetto is a full-fledged form kit. Rapidly create and deploy smart flowing forms and surveys. Drop the kit in your codebase and use all of it, or just the parts you need. The visual [**editor**](https://www.npmjs.com/package/tripetto) is for form creation, the [**collector**](https://www.npmjs.com/package/tripetto-collector) for response collection and the [**SDK**](https://docs.tripetto.community/blocks) for developing more form building blocks.
 
 # Boilerplate for creating blocks
 [![Status](https://gitlab.com/tripetto/blocks/boilerplate/badges/master/pipeline.svg)](https://gitlab.com/tripetto/blocks/boilerplate/commits/master)
@@ -58,4 +58,4 @@ Have a blast. MIT.
 We hope other enthusiasts will also start to develop and share collectors and blocks for Tripetto. We have a [repository](https://github.com/tripetto/community) where we collect a list of community driven blocks and collectors. Did you build something? Submit a [PR](https://github.com/tripetto/community/pulls) and add yours to the list. We appreciate it!
 
 # About us
-If you want to learn more about Tripetto or contribute in any way to our ambitions, visit us at [Tripetto.com](https://tripetto.com/).
+If you want to learn more about Tripetto or contribute in any way, visit us at [Tripetto.com](https://tripetto.com/).
