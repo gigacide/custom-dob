@@ -3,21 +3,21 @@ declare const PACKAGE_NAME: string;
 declare const PACKAGE_VERSION: string;
 
 /** Dependencies */
-import { ConditionCreateTemplates, Features, NodeProvider, PropertiesEditor, _, node } from "@tripetto/forms-editor";
-import { IProvider } from "../types";
+import { ConditionCreateTemplates, Features, NodeBlock, PropertiesEditor, _, node } from "tripetto";
+import { IBlockProps } from "../types";
 
 /** Assets */
 import * as ICON from "../assets/icon.svg";
 
 @node(PACKAGE_NAME, _("Boilerplate v%1", PACKAGE_VERSION), PACKAGE_VERSION)
-export class Provider extends NodeProvider<IProvider> {
-    /** Specifies an icon for the provider. */
+export class Block extends NodeBlock<IBlockProps> {
+    /** Specifies an icon for the block. */
     public static readonly Icon = ICON;
 
-    /** Map the provider instance constructor to the type property. */
-    public readonly Type = Provider;
+    /** Map the block constructor to the type property. */
+    public readonly Type = Block;
 
-    /** Invoked when slots for this provider should be defined. */
+    /** Invoked when slots for this block should be defined. */
     public OnSlots(): void {
         // Prepare your data slots here...
     }
@@ -28,7 +28,7 @@ export class Provider extends NodeProvider<IProvider> {
         Features.Name(this, properties);
     }
 
-    /** If your providers supports conditions, return the create templates here. */
+    /** If your block supports conditions, return the create templates here. */
     public OnConditions(): ConditionCreateTemplates {
         return [];
     }

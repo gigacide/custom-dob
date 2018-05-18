@@ -1,4 +1,4 @@
-import { INodeProvider } from "@tripetto/map";
+import { INodeBlock } from "tripetto";
 
-/** Specifies the properties of the serialized provider. */
-export interface IProvider extends INodeProvider {}
+/** Specifies the properties of the serialized block. */
+export interface IBlockProps extends INodeBlock {}

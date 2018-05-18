@@ -20,5 +20,5 @@
 /translations/*.json
 /translations/*.mo
 
-# Ignore the lock file (remove this from your provider implementation)
+# Ignore the lock file (remove this from your block implementation)
 package-lock.json
