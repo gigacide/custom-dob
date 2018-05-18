@@ -4,7 +4,8 @@
   "version": "1.0.0",
   "description": "Boilerplate for creating a block for Tripetto.",
   "keywords": [
-    "tripetto"
+    "tripetto",
+    "tripetto block"
   ],
   "license": "MIT",
   "private": true,
