@@ -52,7 +52,7 @@ Run into issues or bugs? Report them [here](https://gitlab.com/tripetto/blocks/b
 For general support contact us at [support@tripetto.com](mailto:support@tripetto.com). We're more than happy to assist you.
 
 # License
-Have a blast. MIT.
+Have a blast. [MIT](https://opensource.org/licenses/MIT).
 
 # Community
 We hope other enthusiasts will also start to develop and share collectors and blocks for Tripetto. We have a [repository](https://github.com/tripetto/community) where we collect a list of community driven blocks and collectors. Did you build something? Submit a [PR](https://github.com/tripetto/community/pulls) and add yours to the list. We appreciate it!
