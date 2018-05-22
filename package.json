@@ -2,7 +2,7 @@
   "name": "tripetto-block-boilerplate",
   "title": "Tripetto Block Boilerplate",
   "version": "1.0.0",
-  "description": "Boilerplate for creating a block for Tripetto.",
+  "description": "Boilerplate for creating a block for the Tripetto editor.",
   "keywords": [
     "tripetto",
     "tripetto block"
