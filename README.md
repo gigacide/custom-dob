@@ -13,7 +13,7 @@ Perhaps one of the best things about Tripetto is that you can create your own bu
 # Get started
 1. [Download](https://gitlab.com/tripetto/blocks/boilerplate/repository/master/archive.zip) or clone the [repository](https://gitlab.com/tripetto/blocks/boilerplate) to your local machine:
 ```bash
-$ git clone git@gitlab.com:tripetto/blocks/boilerplate.git
+$ git clone https://gitlab.com/tripetto/blocks/boilerplate.git
 ```
 
 2. Run `npm install` inside the downloaded/cloned folder:
