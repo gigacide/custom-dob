@@ -50,7 +50,7 @@
     "po2json": "^0.4.5",
     "prettier": "^1.15.2",
     "shx": "^0.3.2",
-    "tripetto": "^0.4.13-43",
+    "tripetto": "^0.4.13-44",
     "ts-loader": "^5.3.0",
     "tslint": "^5.11.0",
     "typescript": "^3.1.6",
