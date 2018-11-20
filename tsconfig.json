@@ -1,16 +1,13 @@
 {
-    "compileOnSave": false,
-    "compilerOptions": {
-        "target": "ES5",
-        "module": "commonjs",
-        "newLine": "LF",
-        "strict": true,
-        "experimentalDecorators": true,
-        "skipLibCheck": true,
-        "noEmit": true
-    },
-    "include": [
-        "./types/**/*.ts",
-        "./src/**/*.ts"
-    ]
+  "compileOnSave": false,
+  "compilerOptions": {
+    "target": "ES5",
+    "module": "commonjs",
+    "newLine": "LF",
+    "strict": true,
+    "experimentalDecorators": true,
+    "skipLibCheck": true,
+    "noEmit": true
+  },
+  "include": ["./types/**/*.ts", "./src/**/*.ts"]
 }

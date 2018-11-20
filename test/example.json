@@ -1,23 +1,16 @@
 {
-  "Id": "907e217ccee0e17e1aed0352174314b8204372e4b8c7be9c979d5fe372ad1b45",
-  "Name": "",
-  "Clusters": [
+  "clusters": [
     {
-      "Id": "d957b214c2470bd68b8ad1e1b28c467c5d0198f461848cec3c3ac43f8a9ab92c",
-      "Name": "",
-      "Nodes": [
+      "id": "dc3f9c40d2202871541584a9ea7a1fc6e748d007fa70ce0c30dc30811e48d620",
+      "nodes": [
         {
-          "Id":
-            "ff698c09feb7843e6e76cf5cf7978d57286899d89b0dea60deed18a7c516ba25",
-          "Explanation": "",
-          "Name": "Example block",
-          "NameVisible": true,
-          "Placeholder": "",
-          "Description": "",
-          "Block": { "Type": "tripetto-block-boilerplate", "Version": "1.0.0" }
+          "id": "969408c301f06b6a0d73aadfa31a14fc829961da60b4a9d02375b2c59dbb04a7",
+          "name": "Example",
+          "nameVisible": true,
+          "block": { "type": "tripetto-block-boilerplate", "version": "1.0.0" }
         }
       ]
     }
   ],
-  "Editor": { "Name": "tripetto", "Version": "0.3.4" }
+  "editor": { "name": "tripetto", "version": "0.4.13-43" }
 }
