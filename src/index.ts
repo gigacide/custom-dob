@@ -17,17 +17,17 @@ import * as ICON from "../assets/icon.svg";
 })
 export class Example extends NodeBlock {
     @slots
-    a(): void {
-        // Set your data slots here...
+    defineSlots(): void {
+        // Define your data slots here...
     }
 
     @editor
-    b(): void {
-        // Implement the properties editor here...
+    defineEditor(): void {
+        // Define controls to edit your properties here...
     }
 
     @conditions
-    c(): void {
-        // Set conditions here...
+    defineConditions(): void {
+        // Define conditions here...
     }
 }
