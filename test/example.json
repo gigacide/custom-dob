@@ -7,10 +7,34 @@
           "id": "969408c301f06b6a0d73aadfa31a14fc829961da60b4a9d02375b2c59dbb04a7",
           "name": "Example",
           "nameVisible": true,
+          "slots": [
+            {
+              "id": "7198a51742adf38664be6761d34d5426e162d47cde47701d47d15b22007b9c91",
+              "type": "string",
+              "kind": "static",
+              "reference": "example",
+              "label": "Example slot"
+            }
+          ],
           "block": { "type": "tripetto-block-boilerplate", "version": "1.0.0" }
+        }
+      ],
+      "branches": [
+        {
+          "id": "6d7f01af8b1c522f58de07b5a89e46e25d48c987323d0e508a6c7e71a9841951",
+          "conditions": [
+            {
+              "id": "09d81279aa86574614b717b70691efce0fa2bed2d734c8306d816277affd3ad2",
+              "block": {
+                "type": "tripetto-block-boilerplate",
+                "version": "1.0.0",
+                "node": "969408c301f06b6a0d73aadfa31a14fc829961da60b4a9d02375b2c59dbb04a7"
+              }
+            }
+          ]
         }
       ]
     }
   ],
-  "editor": { "name": "tripetto", "version": "0.4.13-43" }
+  "editor": { "name": "tripetto", "version": "0.4.13-52" }
 }

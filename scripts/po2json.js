@@ -3,14 +3,14 @@ const path = require("path");
 const po2json = require("po2json");
 const prettier = require("prettier");
 
-function Convert(folder) {
+function convert(folder) {
     const files = fs.readdirSync(folder) || [];
 
     files.forEach(function(file) {
         if (fs.statSync(folder + file).isFile()) {
-            const jsPO = file.lastIndexOf(".po") === file.length - 3;
+            const isPO = file.lastIndexOf(".po") === file.length - 3;
 
-            if (jsPO) {
+            if (isPO) {
                 fs.writeFileSync(
                     folder + path.basename(file, ".po") + ".json",
                     prettier.format(JSON.stringify(po2json.parseFileSync(folder + file)), {
@@ -18,9 +18,11 @@ function Convert(folder) {
                     }),
                     "utf8"
                 );
+
+                console.log(`po2json: ${folder + file} -> ${folder + path.basename(file, ".po") + ".json"}`);
             }
         }
     });
 }
 
-Convert("./translations/");
+convert("./translations/");

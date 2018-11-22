@@ -1,1 +1,6 @@
+./src/collector/condition.ts
+./src/collector/example.ts
+./src/collector/index.ts
+./src/condition.ts
+./src/example.ts
 ./src/index.ts
