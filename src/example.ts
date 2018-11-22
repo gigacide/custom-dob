@@ -3,7 +3,15 @@ declare const PACKAGE_NAME: string;
 declare const PACKAGE_VERSION: string;
 
 /** Dependencies */
-import { NodeBlock, Slots, _, block, conditions, editor, slots } from "tripetto";
+import {
+    NodeBlock,
+    Slots,
+    _,
+    block,
+    conditions,
+    editor,
+    slots
+} from "tripetto";
 import { ExampleCondition } from "./condition";
 
 /** Assets */
