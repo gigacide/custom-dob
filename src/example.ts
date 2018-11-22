@@ -7,17 +7,17 @@ import {
     NodeBlock,
     Slots,
     _,
-    block,
     conditions,
     editor,
-    slots
+    slots,
+    tripetto
 } from "tripetto";
 import { ExampleCondition } from "./condition";
 
 /** Assets */
 import * as ICON from "../assets/icon.svg";
 
-@block({
+@tripetto({
     type: "node",
     identifier: PACKAGE_NAME,
     version: PACKAGE_VERSION,

@@ -3,13 +3,13 @@ declare const PACKAGE_NAME: string;
 declare const PACKAGE_VERSION: string;
 
 /** Dependencies */
-import { ConditionBlock, _, block } from "tripetto";
+import { ConditionBlock, _, tripetto } from "tripetto";
 import { Example } from "./example";
 
 /** Assets */
 import * as ICON from "../assets/icon.svg";
 
-@block({
+@tripetto({
     type: "condition",
     identifier: PACKAGE_NAME,
     version: PACKAGE_VERSION,

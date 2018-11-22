@@ -5,11 +5,11 @@ declare const PACKAGE_NAME: string;
 import {
     ConditionBlock,
     ConditionResult,
-    block,
-    condition
+    condition,
+    tripetto
 } from "tripetto-collector";
 
-@block({
+@tripetto({
     type: "condition",
     identifier: PACKAGE_NAME
 })
