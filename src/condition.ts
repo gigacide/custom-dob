@@ -15,6 +15,6 @@ import * as ICON from "../assets/icon.svg";
     version: PACKAGE_VERSION,
     context: Example,
     icon: ICON,
-    label: _("Boilerplate v%1 condition", PACKAGE_VERSION)
+    label: () => _("Boilerplate v%1 condition", PACKAGE_VERSION)
 })
 export class ExampleCondition extends ConditionBlock {}

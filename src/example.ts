@@ -22,7 +22,7 @@ import * as ICON from "../assets/icon.svg";
     identifier: PACKAGE_NAME,
     version: PACKAGE_VERSION,
     icon: ICON,
-    label: _("Boilerplate v%1", PACKAGE_VERSION)
+    label: () => _("Boilerplate v%1", PACKAGE_VERSION)
 })
 export class Example extends NodeBlock {
     example!: Slots.String;
