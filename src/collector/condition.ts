@@ -2,12 +2,7 @@
 declare const PACKAGE_NAME: string;
 
 /** Dependencies */
-import {
-    ConditionBlock,
-    ConditionResult,
-    condition,
-    tripetto
-} from "tripetto-collector";
+import { ConditionBlock, condition, tripetto } from "tripetto-collector";
 
 @tripetto({
     type: "condition",
@@ -17,7 +12,7 @@ export class ExampleCondition extends ConditionBlock<{
     checked: boolean;
 }> {
     @condition
-    evaluateCondition(): ConditionResult {
+    evaluateCondition(): boolean {
         // This example condition will always pass...
 
         return true;
