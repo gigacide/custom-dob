@@ -4,7 +4,7 @@ const path = require("path");
 const package = require("./package.json");
 const externals = require("webpack-node-externals");
 
-const config = type => {
+const config = (type, target) => {
     return {
         entry:
             type === "collector"
@@ -14,12 +14,12 @@ const config = type => {
             type === "collector"
                 ? {
                       filename: "index.js",
-                      path: path.resolve(__dirname, "collector"),
+                      path: path.resolve(__dirname, "collector", target || ""),
                       libraryTarget: "umd",
                       library: JSON.stringify(package.name)
                   }
                 : {
-                      filename: type === "umd" ? "umd.js" : type === "collector" ? "index.js" : "main.js",
+                      filename: target === "umd" ? "umd.js" : target + ".js",
                       path: path.resolve(__dirname, "dist")
                   },
         module: {
@@ -29,7 +29,10 @@ const config = type => {
                     loader: "ts-loader",
                     options: {
                         compilerOptions: {
-                            noEmit: false
+                            noEmit: false,
+                            target: target === "es6" ? "ES6" : "ES5",
+                            module: target === "es6" ? "es6" : "commonjs",
+                            outDir: "./collector" + (target ? "/" + target : "")
                         },
                         configFile: type === "collector" ? "tsconfig.collector.json" : "tsconfig.json"
                     }
@@ -47,7 +50,7 @@ const config = type => {
             extensions: [".ts", ".js"]
         },
         externals:
-            type === "umd"
+            target === "umd"
                 ? {
                       tripetto: "Tripetto"
                   }
@@ -70,9 +73,9 @@ const config = type => {
 
 module.exports = (env, argv) => {
     return [
-        config("umd"),
+        config("editor", "umd"),
         ...(argv.mode === "production"
-            ? [config("module"), config("collector")]
+            ? [config("editor", "es5"), config("editor", "es6"), config("collector"), config("collector", "es5"), config("collector", "es6")]
             : [])
     ];
 };
