@@ -25,13 +25,13 @@ import * as ICON from "../assets/icon.svg";
     label: () => _("Boilerplate v%1", PACKAGE_VERSION)
 })
 export class Example extends NodeBlock {
-    example!: Slots.String;
+    exampleSlot!: Slots.String;
 
     @slots
     defineSlot(): void {
         // Define your data slots here...
 
-        this.example = this.slots.static({
+        this.exampleSlot = this.slots.static({
             type: Slots.String,
             reference: "example",
             label: _("Example slot")
@@ -48,9 +48,9 @@ export class Example extends NodeBlock {
         this.editor.explanation();
 
         this.editor.groups.options();
-        this.editor.required(this.example);
+        this.editor.required(this.exampleSlot);
         this.editor.visibility();
-        this.editor.alias(this.example);
+        this.editor.alias(this.exampleSlot);
     }
 
     @conditions

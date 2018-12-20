@@ -55,7 +55,7 @@
     "prettier": "^1.15.3",
     "shx": "^0.3.2",
     "tripetto": "^0.4.13-59",
-    "tripetto-collector": "^0.4.26-20",
+    "tripetto-collector": "^0.4.26-42",
     "ts-loader": "^5.3.1",
     "tslint": "^5.11.0",
     "typescript": "^3.2.1",
