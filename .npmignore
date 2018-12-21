@@ -1,5 +1,5 @@
 *
-!/dist/**/*.js
-!/dist/**/*.d.ts
-!/types/**/*.d.ts
+!/dist/*.js
+!/collector/**/*.js
+!/collector/**/*.d.ts
 !/translations/*.json

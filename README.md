@@ -1,11 +1,11 @@
-![Tripetto](https://docs.tripetto.community/assets/header.svg)
+![Tripetto](https://docs.tripetto.com/assets/header.svg)
 
-Tripetto is a full-fledged form kit. Rapidly create and deploy smart flowing forms and surveys. Drop the kit in your codebase and use all of it, or just the parts you need. The visual [**editor**](https://www.npmjs.com/package/tripetto) is for form creation, the [**collector**](https://www.npmjs.com/package/tripetto-collector) for response collection and the [**SDK**](https://docs.tripetto.community/blocks) for developing more form building blocks.
+Tripetto is a full-fledged form kit. Rapidly create and deploy smart flowing forms and surveys. Drop the kit in your codebase and use all of it, or just the parts you need. The visual [**editor**](https://www.npmjs.com/package/tripetto) is for form creation, the [**collector**](https://www.npmjs.com/package/tripetto-collector) for response collection and the [**SDK**](https://docs.tripetto.com/guide/blocks) for developing more form building blocks.
 
 # Boilerplate for creating blocks
 [![Status](https://gitlab.com/tripetto/blocks/boilerplate/badges/master/pipeline.svg)](https://gitlab.com/tripetto/blocks/boilerplate/commits/master)
 [![Styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
-[![Docs](https://img.shields.io/badge/docs-website-blue.svg)](https://docs.tripetto.community/blocks)
+[![Docs](https://img.shields.io/badge/docs-website-blue.svg)](https://docs.tripetto.com/guide/blocks)
 [![Spectrum](https://withspectrum.github.io/badge/badge.svg)](https://spectrum.chat/tripetto)
 
 Perhaps one of the best things about Tripetto is that you can create your own building blocks. This boilerplate shows you how to do that. Use it as a starting point for your creativity.
@@ -26,7 +26,7 @@ $ npm install
 $ npm test
 ```
 
-This command will start the local editor server and tries to open the URL `http://localhost:3333` in your default browser. If no browser opens, just open the browser of your choice and navigate to this [URL](http://localhost:3333). By default the [form definition](https://docs.tripetto.community/editor/#definitions) located at `./test/example.json` is loaded.
+This command will start the local editor server and tries to open the URL `http://localhost:3333` in your default browser. If no browser opens, just open the browser of your choice and navigate to this [URL](http://localhost:3333). By default the [form definition](https://docs.tripetto.com/guide/editor/#definitions) located at `./test/example.json` is loaded.
 
 Next, open your favorite code editor/IDE and start working on your block. When a source code change is detected, the block should automatically recompile and the Tripetto editor in the browser should refresh.
 
@@ -39,12 +39,12 @@ Next, run the following command to increment the package version number, do a pr
 $ npm run publish:patch
 ```
 
-When your block is published, other people can install it and start using it inside the Tripetto editor. All details on how to do that can be found [here](https://docs.tripetto.community/editor/).
+When your block is published, other people can install it and start using it inside the Tripetto editor. All details on how to do that can be found [here](https://docs.tripetto.com/guide/editor/).
 
 # Documentation
-The complete documentation can be found at [docs.tripetto.community](https://docs.tripetto.community).
+The complete documentation can be found at [docs.tripetto.com](https://docs.tripetto.com).
 
-Detailed **blocks** documentation is found [here](https://docs.tripetto.community/blocks/).
+Detailed **blocks** documentation is found [here](https://docs.tripetto.com/guide/blocks/).
 
 # Support
 Run into issues or bugs? Report them [here](https://gitlab.com/tripetto/blocks/boilerplate/issues) and we'll look into them.
