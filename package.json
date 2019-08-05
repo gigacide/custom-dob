@@ -46,7 +46,7 @@
     "publish:major": "git-branch-is master && npm version major && npm publish"
   },
   "devDependencies": {
-    "@marblecore/tslint-configuration": "^5.12.0",
+    "@marblecore/tslint-configuration": "^5.12.1",
     "concurrently": "^4.1.1",
     "exit-on-dirty-git": "^1.0.1",
     "git-branch-is": "^2.1.0",
@@ -54,13 +54,13 @@
     "po2json": "^0.4.5",
     "prettier": "^1.18.2",
     "shx": "^0.3.2",
-    "tripetto": "^1.3.0",
-    "tripetto-collector": "^1.3.0",
+    "tripetto": "^1.4.0",
+    "tripetto-collector": "^1.5.0",
     "ts-loader": "^6.0.4",
     "tslint": "^5.18.0",
     "typescript": "^3.5.3",
     "url-loader": "^2.1.0",
-    "webpack": "^4.38.0",
+    "webpack": "^4.39.1",
     "webpack-cli": "^3.3.6",
     "webpack-livereload-plugin": "^2.2.0",
     "webpack-node-externals": "^1.7.2"
