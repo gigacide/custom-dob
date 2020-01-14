@@ -35,7 +35,7 @@
     "make:clean": "shx rm -rf *.tgz ./dist ./collector",
     "make:compile": "tsc",
     "make:po2json": "shx rm -rf ./translations/*.json && node ./tasks/po2json.js",
-    "make": "npm run make:clean && npm run lint && npm run make:po2json && webpack --mode production",
+    "make": "npm run make:clean && npm run lint && npm run pot && npm run make:po2json && webpack --mode production",
     "preversion": "npm run format && npm run lint && npm run make:compile && exit-on-dirty-git",
     "postversion": "git push --follow-tags",
     "prepack": "npm run make",
