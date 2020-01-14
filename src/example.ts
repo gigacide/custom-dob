@@ -15,14 +15,16 @@ import {
 import { ExampleCondition } from "./condition";
 
 /** Assets */
-import * as ICON from "../assets/icon.svg";
+import ICON from "../assets/icon.svg";
 
 @tripetto({
     type: "node",
     identifier: PACKAGE_NAME,
     version: PACKAGE_VERSION,
     icon: ICON,
-    label: () => _("Boilerplate v%1", PACKAGE_VERSION)
+    get label(): string {
+        return _("Boilerplate v%1", PACKAGE_VERSION);
+    }
 })
 export class Example extends NodeBlock {
     exampleSlot!: Slots.String;

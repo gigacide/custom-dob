@@ -18,6 +18,7 @@
 # Project specific
 /dist
 /collector
-/translations/*.json
-/translations/*.mo
+/translations/*
+!/translations/*.po
+/test/example.json
 *.tgz

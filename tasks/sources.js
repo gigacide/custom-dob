@@ -1,4 +1,9 @@
 const fs = require("fs");
+const tripetto = require("tripetto");
+const ignore = [];
+const mkdirp = require("mkdirp");
+
+mkdirp.sync("./translations/");
 
 function sources(path) {
     const files = fs.readdirSync(path) || [];
@@ -8,10 +13,10 @@ function sources(path) {
         if (fs.statSync(path + file).isDirectory()) {
             r += sources(path + file + "/");
         } else if (fs.statSync(path + file).isFile()) {
-            const isSource = file.lastIndexOf(".ts") === file.length - 3;
+            const isSource = file.lastIndexOf(".ts") === file.length - 3 || file.lastIndexOf(".tsx") === file.length - 4;
             const isDefinition = file.lastIndexOf(".d.ts") === file.length - 5;
 
-            if (isSource && !isDefinition) {
+            if (isSource && !isDefinition && !tripetto.findFirst(ignore, i => (path + file).indexOf(i) === 0)) {
                 r += path + file + "\n";
             }
         }

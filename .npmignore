@@ -3,3 +3,4 @@
 !/collector/**/*.js
 !/collector/**/*.d.ts
 !/translations/*.json
+!/translations/*.pot
