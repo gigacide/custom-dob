@@ -1,6 +1,7 @@
 *
-!/dist/*.js
-!/collector/**/*.js
-!/collector/**/*.d.ts
+!/builder/**/*.js
+!/builder/**/*.d.ts
+!/runner/**/*.js
+!/runner/**/*.d.ts
 !/translations/*.json
 !/translations/*.pot

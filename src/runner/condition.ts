@@ -2,11 +2,15 @@
 declare const PACKAGE_NAME: string;
 
 /** Dependencies */
-import { ConditionBlock, condition, tripetto } from "tripetto-collector";
+import {
+    ConditionBlock,
+    condition,
+    tripetto,
+} from "tripetto-runner-foundation";
 
 @tripetto({
     type: "condition",
-    identifier: PACKAGE_NAME
+    identifier: PACKAGE_NAME,
 })
 export class ExampleCondition extends ConditionBlock<{
     checked: boolean;

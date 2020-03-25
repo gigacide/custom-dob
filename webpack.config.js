@@ -6,22 +6,14 @@ const externals = require("webpack-node-externals");
 
 const config = (type, target) => {
     return {
-        entry:
-            type === "collector"
-                ? "./src/collector/index.ts"
-                : "./src/index.ts",
-        output:
-            type === "collector"
-                ? {
-                      filename: "index.js",
-                      path: path.resolve(__dirname, "collector", target || ""),
-                      libraryTarget: "umd",
-                      library: JSON.stringify(package.name)
-                  }
-                : {
-                      filename: target === "umd" ? "umd.js" : target + ".js",
-                      path: path.resolve(__dirname, "dist")
-                  },
+        entry: `./src/${type}/index.ts`,
+        output: {
+            filename: "index.js",
+            path: path.resolve(__dirname, type, target || ""),
+            libraryTarget: (type === "runner" && "umd") || undefined,
+            library:
+                (type === "runner" && JSON.stringify(package.name)) || undefined
+        },
         module: {
             rules: [
                 {
@@ -30,11 +22,12 @@ const config = (type, target) => {
                     options: {
                         compilerOptions: {
                             noEmit: false,
+                            declaration: type === "runner",
                             target: target === "es6" ? "ES6" : "ES5",
                             module: target === "es6" ? "es6" : "commonjs",
-                            outDir: "./collector" + (target ? "/" + target : "")
+                            outDir: `./${type}${target ? "/" + target : ""}`
                         },
-                        configFile: type === "collector" ? "tsconfig.collector.json" : "tsconfig.json"
+                        configFile: type === "runner" ? "tsconfig.runner.json" : "tsconfig.json"
                     }
                 },
                 {
@@ -50,7 +43,7 @@ const config = (type, target) => {
             extensions: [".ts", ".js"]
         },
         externals:
-            target === "umd"
+            type === "builder" && !target
                 ? {
                       tripetto: "Tripetto"
                   }
@@ -60,7 +53,7 @@ const config = (type, target) => {
                 PACKAGE_NAME: JSON.stringify(package.name),
                 PACKAGE_VERSION: JSON.stringify(package.version)
             }),
-            ...(type === "umd"
+            ...(type === "builder" && !target
                 ? [
                       new webpackLiveReload({
                           appendScriptTag: true
@@ -73,9 +66,15 @@ const config = (type, target) => {
 
 module.exports = (env, argv) => {
     return [
-        config("editor", "umd"),
+        config("builder"),
         ...(argv.mode === "production"
-            ? [config("editor", "es5"), config("editor", "es6"), config("collector"), config("collector", "es5"), config("collector", "es6")]
+            ? [
+                  config("builder", "es5"),
+                  config("builder", "es6"),
+                  config("runner"),
+                  config("runner", "es5"),
+                  config("runner", "es6")
+              ]
             : [])
     ];
 };

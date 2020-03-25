@@ -7,7 +7,7 @@ import { ConditionBlock, _, tripetto } from "tripetto";
 import { Example } from "./example";
 
 /** Assets */
-import ICON from "../assets/icon.svg";
+import ICON from "../../assets/icon.svg";
 
 @tripetto({
     type: "condition",
@@ -17,6 +17,6 @@ import ICON from "../assets/icon.svg";
     icon: ICON,
     get label(): string {
         return _("Boilerplate v%1 condition", PACKAGE_VERSION);
-    }
+    },
 })
 export class ExampleCondition extends ConditionBlock {}

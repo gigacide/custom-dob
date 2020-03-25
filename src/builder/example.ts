@@ -10,12 +10,12 @@ import {
     conditions,
     editor,
     slots,
-    tripetto
+    tripetto,
 } from "tripetto";
 import { ExampleCondition } from "./condition";
 
 /** Assets */
-import ICON from "../assets/icon.svg";
+import ICON from "../../assets/icon.svg";
 
 @tripetto({
     type: "node",
@@ -24,7 +24,7 @@ import ICON from "../assets/icon.svg";
     icon: ICON,
     get label(): string {
         return _("Boilerplate v%1", PACKAGE_VERSION);
-    }
+    },
 })
 export class Example extends NodeBlock {
     exampleSlot!: Slots.String;
@@ -36,7 +36,7 @@ export class Example extends NodeBlock {
         this.exampleSlot = this.slots.static({
             type: Slots.String,
             reference: "example",
-            label: _("Example slot")
+            label: _("Example slot"),
         });
     }
 
@@ -53,6 +53,7 @@ export class Example extends NodeBlock {
         this.editor.required(this.exampleSlot);
         this.editor.visibility();
         this.editor.alias(this.exampleSlot);
+        this.editor.exportable(this.exampleSlot);
     }
 
     @conditions
@@ -60,7 +61,7 @@ export class Example extends NodeBlock {
         // Define conditions here...
 
         this.conditions.template({
-            condition: ExampleCondition
+            condition: ExampleCondition,
         });
     }
 }

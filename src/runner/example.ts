@@ -1,5 +1,5 @@
 /** Dependencies */
-import { NodeBlock, validator } from "tripetto-collector";
+import { NodeBlock, validator } from "tripetto-runner-foundation";
 
 export abstract class Example extends NodeBlock {
     @validator

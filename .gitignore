@@ -16,8 +16,8 @@
 /node_modules
 
 # Project specific
-/dist
-/collector
+/builder
+/runner
 /translations/*
 !/translations/*.po
 /test/example.json
