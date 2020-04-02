@@ -4,7 +4,7 @@ declare const PACKAGE_VERSION: string;
 
 /** Dependencies */
 import { ConditionBlock, _, tripetto } from "tripetto";
-import { Example } from "./example";
+import { Example } from "./";
 
 /** Assets */
 import ICON from "../../assets/icon.svg";

@@ -1,5 +1,12 @@
-/** Imports */
+/** Dependencies */
+import { NodeBlock, validator } from "tripetto-runner-foundation";
 import "./condition";
 
-/** Exports */
-export { Example } from "./example";
+export abstract class Example extends NodeBlock {
+    @validator
+    performValidation(): boolean {
+        // This example validator will always pass...
+
+        return true;
+    }
+}
