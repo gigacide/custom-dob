@@ -22,7 +22,7 @@ import ICON from "../../assets/icon.svg";
     identifier: PACKAGE_NAME,
     version: PACKAGE_VERSION,
     icon: ICON,
-    get label(): string {
+    get label() {
         return _("Boilerplate v%1", PACKAGE_VERSION);
     },
 })

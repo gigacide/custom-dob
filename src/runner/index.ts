@@ -4,7 +4,7 @@ import "./condition";
 
 export abstract class Example extends NodeBlock {
     @validator
-    performValidation(): boolean {
+    doValidation(): boolean {
         // This example validator will always pass...
 
         return true;

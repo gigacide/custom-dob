@@ -15,7 +15,7 @@ import ICON from "../../assets/icon.svg";
     version: PACKAGE_VERSION,
     context: Example,
     icon: ICON,
-    get label(): string {
+    get label() {
         return _("Boilerplate v%1 condition", PACKAGE_VERSION);
     },
 })

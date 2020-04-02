@@ -46,7 +46,7 @@
     "publish:major": "git-branch-is master && npm version major && npm publish"
   },
   "devDependencies": {
-    "@marblecore/tslint-configuration": "^6.1.1",
+    "@marblecore/tslint-configuration": "^6.1.2",
     "concurrently": "^5.1.0",
     "exit-on-dirty-git": "^1.0.1",
     "git-branch-is": "^3.1.0",
