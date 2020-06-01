@@ -19,8 +19,16 @@ pot = tripetto.Str.replace(
     ""
 );
 pot = tripetto.Str.replace(pot, `# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.\n`, "");
-pot = tripetto.Str.replace(pot, `"Report-Msgid-Bugs-To: \\n"`, `"Report-Msgid-Bugs-To: support@tripetto.com\\n"`);
-pot = tripetto.Str.replace(pot, `"Language-Team: LANGUAGE <LL@li.org>\\n"\n`, "");
+pot = tripetto.Str.replace(
+    pot,
+    `"Report-Msgid-Bugs-To: \\n"`,
+    `"Report-Msgid-Bugs-To: support@tripetto.com\\n"`
+);
+pot = tripetto.Str.replace(
+    pot,
+    `"Language-Team: LANGUAGE <LL@li.org>\\n"\n`,
+    ""
+);
 pot = tripetto.Str.replace(pot, `"Language: \\n"`, `"Language: en\\n"`);
 pot = tripetto.Str.replace(
     pot,

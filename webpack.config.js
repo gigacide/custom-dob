@@ -67,11 +67,11 @@ const config = (type, target) => {
                               parallel: false,
                           },
                           onBuildEnd: {
-                            scripts: ["npm run pot"],
-                            blocking: false,
-                            parallel: true,
-                        },
-                        dev: false
+                              scripts: ["npm run pot"],
+                              blocking: false,
+                              parallel: true,
+                          },
+                          dev: false,
                       }),
                       new webpackLiveReload({
                           appendScriptTag: true,
