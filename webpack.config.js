@@ -1,4 +1,5 @@
 const webpack = require("webpack");
+const webpackShell = require("webpack-shell-plugin-next");
 const webpackLiveReload = require("webpack-livereload-plugin");
 const path = require("path");
 const package = require("./package.json");
@@ -12,7 +13,8 @@ const config = (type, target) => {
             path: path.resolve(__dirname, type, target || ""),
             libraryTarget: (type === "runner" && "umd") || undefined,
             library:
-                (type === "runner" && JSON.stringify(package.name)) || undefined
+                (type === "runner" && JSON.stringify(package.name)) ||
+                undefined,
         },
         module: {
             rules: [
@@ -25,42 +27,58 @@ const config = (type, target) => {
                             declaration: type === "runner",
                             target: target === "es6" ? "ES6" : "ES5",
                             module: target === "es6" ? "es6" : "commonjs",
-                            outDir: `./${type}${target ? "/" + target : ""}`
+                            outDir: `./${type}${target ? "/" + target : ""}`,
                         },
-                        configFile: type === "runner" ? "tsconfig.runner.json" : "tsconfig.json"
-                    }
+                        configFile:
+                            type === "runner"
+                                ? "tsconfig.runner.json"
+                                : "tsconfig.json",
+                    },
                 },
                 {
                     test: /\.svg$/,
                     use: [
                         "url-loader",
-                        "image-webpack-loader?{svgo:{plugins:[{cleanupAttrs: true},{removeDoctype: true},{removeXMLProcInst: true},{removeComments: true},{removeMetadata: true},{removeTitle: true},{removeDesc:{removeAny: true}}]}}"
-                    ]
-                }
-            ]
+                        "image-webpack-loader?{svgo:{plugins:[{cleanupAttrs: true},{removeDoctype: true},{removeXMLProcInst: true},{removeComments: true},{removeMetadata: true},{removeTitle: true},{removeDesc:{removeAny: true}}]}}",
+                    ],
+                },
+            ],
         },
         resolve: {
-            extensions: [".ts", ".js"]
+            extensions: [".ts", ".js"],
         },
         externals:
             type === "builder" && !target
                 ? {
-                      tripetto: "Tripetto"
+                      tripetto: "Tripetto",
                   }
                 : [externals()],
         plugins: [
             new webpack.DefinePlugin({
                 PACKAGE_NAME: JSON.stringify(package.name),
-                PACKAGE_VERSION: JSON.stringify(package.version)
+                PACKAGE_VERSION: JSON.stringify(package.version),
             }),
             ...(type === "builder" && !target
                 ? [
+                      new webpackShell({
+                          onBuildStart: {
+                              scripts: ["npm run make:po2json"],
+                              blocking: true,
+                              parallel: false,
+                          },
+                          onBuildEnd: {
+                            scripts: ["npm run pot"],
+                            blocking: false,
+                            parallel: true,
+                        },
+                        dev: false
+                      }),
                       new webpackLiveReload({
-                          appendScriptTag: true
-                      })
+                          appendScriptTag: true,
+                      }),
                   ]
-                : [])
-        ]
+                : []),
+        ],
     };
 };
 
@@ -73,8 +91,8 @@ module.exports = (env, argv) => {
                   config("builder", "es6"),
                   config("runner"),
                   config("runner", "es5"),
-                  config("runner", "es6")
+                  config("runner", "es6"),
               ]
-            : [])
+            : []),
     ];
 };
