@@ -42,7 +42,7 @@
     "postversion": "git push --follow-tags",
     "prepack": "npm run make",
     "prepublishOnly": "exit-on-dirty-git",
-    "publish:next": "git-branch-is next && npm version prerelease && npm publish --tag next",
+    "publish:next": "git push --set-upstream origin next && git-branch-is next && npm version prerelease && npm publish --tag next",
     "publish:patch": "git-branch-is master && npm version patch && npm publish",
     "publish:minor": "git-branch-is master && npm version minor && npm publish",
     "publish:major": "git-branch-is master && npm version major && npm publish"
