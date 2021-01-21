@@ -12,11 +12,10 @@ const config = (type, target) => {
         output: {
             filename: "index.js",
             path: path.resolve(__dirname, type, target || ""),
-            libraryTarget: (target && target !== "umd" && "commonjs2") || "umd",
+            libraryTarget: !target || target === "umd" ? "umd" : "commonjs2",
             library:
-                (type === "runner" &&
-                    target === "umd" &&
-                    package.name
+                ((!target || target === "umd") &&
+                    (package.name + ((type === "builder" && "-builder") || ""))
                         .split("-")
                         .map((s) => s.charAt(0).toUpperCase() + s.substr(1))
                         .join("")) ||
