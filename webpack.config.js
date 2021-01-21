@@ -1,4 +1,5 @@
 const webpack = require("webpack");
+const webpackTerser = require("terser-webpack-plugin");
 const webpackShell = require("webpack-shell-plugin-next");
 const webpackLiveReload = require("webpack-livereload-plugin");
 const path = require("path");
@@ -11,9 +12,14 @@ const config = (type, target) => {
         output: {
             filename: "index.js",
             path: path.resolve(__dirname, type, target || ""),
-            libraryTarget: (type === "runner" && "umd") || undefined,
+            libraryTarget: (target && target !== "umd" && "commonjs2") || "umd",
             library:
-                (type === "runner" && JSON.stringify(package.name)) ||
+                (type === "runner" &&
+                    target === "umd" &&
+                    package.name
+                        .split("-")
+                        .map((s) => s.charAt(0).toUpperCase() + s.substr(1))
+                        .join("")) ||
                 undefined,
         },
         module: {
@@ -48,11 +54,29 @@ const config = (type, target) => {
             extensions: [".ts", ".js"],
         },
         externals:
-            type === "builder" && !target
+            target === "umd" || (type === "builder" && !target)
                 ? {
                       tripetto: "Tripetto",
+                      "tripetto-runner-foundation": "TripettoRunner",
                   }
                 : [externals()],
+        optimization: {
+            minimizer: [
+                new webpackTerser({
+                    terserOptions: {
+                        output: {
+                            comments: false,
+                        },
+                    },
+                    extractComments: false,
+                }),
+                new webpack.BannerPlugin(
+                    `${package.title} ${
+                        package.version
+                    } - Copyright (C) ${new Date().getFullYear()} Tripetto B.V. - All Rights Reserved`
+                ),
+            ],
+        },
         plugins: [
             new webpack.DefinePlugin({
                 PACKAGE_NAME: JSON.stringify(package.name),
