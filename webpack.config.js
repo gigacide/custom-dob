@@ -29,6 +29,7 @@ const config = (type, target) => {
                     options: {
                         compilerOptions: {
                             noEmit: false,
+                            noUnusedLocals: false,
                             declaration: type === "runner",
                             target: target === "es6" ? "ES6" : "ES5",
                             module: target === "es6" ? "es6" : "commonjs",
