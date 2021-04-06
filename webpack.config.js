@@ -20,6 +20,11 @@ const config = (type, target) => {
                         .map((s) => s.charAt(0).toUpperCase() + s.substr(1))
                         .join("")) ||
                 undefined,
+            globalObject:
+                (type === "runner" &&
+                    (!target || target === "umd") &&
+                    "this") ||
+                undefined,
         },
         module: {
             rules: [
