@@ -1,6 +1,6 @@
 const fs = require("fs");
 const tripetto = require("tripetto");
-const package = require("../package.json");
+const package = require("../../package.json");
 let pot = fs.readFileSync("./translations/template.pot", "utf-8");
 
 pot = tripetto.Str.replace(

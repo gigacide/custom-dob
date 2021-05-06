@@ -2,6 +2,7 @@
 !/builder/**/*.js
 !/builder/**/*.d.ts
 !/runner/**/*.js
+!/runner/**/*.mjs
 !/runner/**/*.d.ts
 !/translations/*.json
 !/translations/*.pot
