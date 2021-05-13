@@ -48,12 +48,8 @@ const config = (type, target, test) => {
                         compilerOptions: {
                             noEmit: false,
                             noUnusedLocals: false,
-                            declaration: type === "runner" && target === "umd",
                             target: "ES5",
                             module: "CommonJS",
-                            outDir: `./${type}${
-                                (target !== "umd" && "/" + target) || ""
-                            }`,
                         },
                         configFile:
                             type === "runner"

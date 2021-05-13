@@ -22,16 +22,18 @@
   "bugs": {
     "url": "https://gitlab.com/tripetto/blocks/boilerplate/issues"
   },
-  "main": "builder/es5/index.js",
-  "browser": "builder/es5/index.js",
+  "main": "./builder/es5/index.js",
+  "browser": "./builder/es5/index.js",
   "module": "./builder/esm/index.mjs",
-  "unpkg": "builder/index.js",
-  "jsdelivr": "builder/index.js",
+  "types": "./builder/index.d.ts",
+  "unpkg": "./builder/index.js",
+  "jsdelivr": "./builder/index.js",
   "exports": {
     ".": {
       "import": "./builder/esm/index.mjs",
       "require": "./builder/es5/index.js",
       "umd": "./builder/index.js",
+      "types": "./builder/index.d.ts",
       "default": "./builder/es5/index.js"
     },
     "./runner": {
@@ -51,9 +53,13 @@
       "require": "./builder/es5/index.js",
       "umd": "./builder/index.js",
       "script": "./builder/index.js",
+      "types": "./builder/index.d.ts",
       "default": "./builder/es5/index.js"
     },
-    "./builder/es5": "./builder/es5/index.js",
+    "./builder/es5": {
+      "types": "./builder/index.d.ts",
+      "default": "./builder/es5/index.js"
+    },
     "./translations/*": "./translations/*.json",
     "./package.json": "./package.json"
   },
@@ -67,10 +73,11 @@
     "test": "webpack --mode development && concurrently -n \"tripetto,webpack\" -c \"blue.bold,green\" -k -s \"first\" \"tripetto ./tests/example.json --verbose\" \"webpack --mode development --watch\"",
     "make:clean": "shx rm -rf *.tgz ./builder/* ./runner/* ./reports/*",
     "make:compile": "tsc",
+    "make:types": "tsc --declaration --noEmit false --emitDeclarationOnly --diagnostics --outDir ./ && prettier --tab-width 4 --write \"builder/**/*.d.ts\" \"runner/**/*.d.ts\"",
     "make:po2json": "shx rm -rf ./translations/*.json && node ./tasks/l10n/po2json.js",
     "make:esm": "rollup -c",
     "make:tests": "node ./tests/es5.spec.js && node ./tests/esm.spec.mjs",
-    "make": "npm run make:clean && npm run lint && webpack --mode production && npm run make:esm && npm run make:tests && npm run stats",
+    "make": "npm run make:clean && npm run lint && npm run make:types && webpack --mode production && npm run make:esm && npm run make:tests && npm run stats",
     "preversion": "npm run format && npm run lint && npm run make:compile && exit-on-dirty-git",
     "postversion": "git push --follow-tags",
     "prepack": "npm run make",
