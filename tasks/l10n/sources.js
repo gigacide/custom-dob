@@ -1,9 +1,8 @@
 const fs = require("fs");
 const tripetto = require("tripetto");
 const ignore = [];
-const mkdirp = require("mkdirp");
 
-mkdirp.sync("./translations/");
+fs.mkdirSync("./translations/", { recursive: true });
 
 function sources(path) {
     const files = fs.readdirSync(path) || [];

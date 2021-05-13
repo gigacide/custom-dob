@@ -1,5 +1,5 @@
 try {
-    const lib = require("../../runner/es5/index.js");
+    const lib = require("../runner/es5/index.js");
 
     if (typeof lib.Example === "undefined") {
         throw new Error();
@@ -9,7 +9,7 @@ try {
 }
 
 try {
-    const lib = require("../../builder/es5/index.js");
+    const lib = require("../builder/es5/index.js");
 
     if (typeof lib === "undefined") {
         throw new Error();

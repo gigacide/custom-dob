@@ -2,9 +2,8 @@ const fs = require("fs");
 const path = require("path");
 const po2json = require("po2json");
 const prettier = require("prettier");
-const mkdirp = require("mkdirp");
 
-mkdirp.sync("./translations/");
+fs.mkdirSync("./translations/", { recursive: true });
 
 function convert(folder) {
     const files = fs.readdirSync(folder) || [];

@@ -26,7 +26,7 @@ $ npm install
 $ npm test
 ```
 
-This command will start the local builder server and tries to open the URL `http://localhost:3333` in your default browser. If no browser opens, just open the browser of your choice and navigate to this [URL](http://localhost:3333). By default the [form definition](https://docs.tripetto.com/guide/builder/#definitions) located at `./test/example.json` is loaded.
+This command will start the local builder server and tries to open the URL `http://localhost:3333` in your default browser. If no browser opens, just open the browser of your choice and navigate to this [URL](http://localhost:3333). By default the [form definition](https://docs.tripetto.com/guide/builder/#definitions) located at `./tests/example.json` is loaded.
 
 Next, open your favorite code editor/IDE and start working on your block. When a source code change is detected, the block should automatically recompile and the Tripetto builder in the browser should refresh.
 

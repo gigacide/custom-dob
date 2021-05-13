@@ -1,5 +1,5 @@
-const package = require("../../package.json");
+const pkg = require("../../package.json");
 
-module.exports = `${package.title} ${
-    package.version
+module.exports = `${pkg.title} ${
+    pkg.version
 } - Copyright (C) ${new Date().getFullYear()} Tripetto B.V. - All Rights Reserved`;

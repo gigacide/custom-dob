@@ -5,12 +5,11 @@ const webpackLiveReload = require("webpack-livereload-plugin");
 const path = require("path");
 const banner = require("./tasks/banner/banner.js");
 const package = require("./package.json");
-const externals = require("webpack-node-externals");
 const analyzer = require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
 
 const config = (type, target, test) => {
     return {
-        target: target === "es6" ? "web" : ["web", "es5"],
+        target: ["web", "es5"],
         entry: `./src/${type}/index.ts`,
         output: {
             filename: "index.js",
@@ -50,8 +49,8 @@ const config = (type, target, test) => {
                             noEmit: false,
                             noUnusedLocals: false,
                             declaration: type === "runner" && target === "umd",
-                            target: target === "es6" ? "ES6" : "ES5",
-                            module: target === "es6" ? "ES6" : "CommonJS",
+                            target: "ES5",
+                            module: "CommonJS",
                             outDir: `./${type}${
                                 (target !== "umd" && "/" + target) || ""
                             }`,
@@ -66,7 +65,26 @@ const config = (type, target, test) => {
                     test: /\.svg$/,
                     use: [
                         "url-loader",
-                        "image-webpack-loader?{svgo:{plugins:[{cleanupAttrs: true},{removeDoctype: true},{removeXMLProcInst: true},{removeComments: true},{removeMetadata: true},{removeTitle: true},{removeDesc:{removeAny: true}}]}}",
+                        {
+                            loader: "image-webpack-loader",
+                            options: {
+                                svgo: {
+                                    plugins: [
+                                        { cleanupAttrs: true },
+                                        { removeDoctype: true },
+                                        { removeXMLProcInst: true },
+                                        { removeComments: true },
+                                        { removeMetadata: true },
+                                        { removeTitle: true },
+                                        {
+                                            removeDesc: {
+                                                removeAny: true,
+                                            },
+                                        },
+                                    ],
+                                },
+                            },
+                        },
                     ],
                 },
             ],
@@ -74,13 +92,13 @@ const config = (type, target, test) => {
         resolve: {
             extensions: [".ts", ".js"],
         },
-        externals:
-            target === "umd"
-                ? {
-                      tripetto: "Tripetto",
-                      "tripetto-runner-foundation": "TripettoRunner",
-                  }
-                : [externals()],
+        externals: {
+            tripetto: target === "umd" ? "Tripetto" : "commonjs tripetto",
+            "tripetto-runner-foundation":
+                target === "umd"
+                    ? "TripettoRunner"
+                    : "commonjs tripetto-runner-foundation",
+        },
         optimization: {
             minimizer: [
                 new webpackTerser({
@@ -140,10 +158,8 @@ module.exports = (env, argv) => {
         ...(argv.mode === "production"
             ? [
                   config("builder", "es5"),
-                  config("builder", "es6"),
                   config("runner", "umd"),
                   config("runner", "es5"),
-                  config("runner", "es6"),
               ]
             : []),
     ];
