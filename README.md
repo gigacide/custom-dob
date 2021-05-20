@@ -1,4 +1,4 @@
-![Tripetto](https://unpkg.com/tripetto/assets/banner.svg)
+# <a href="https://tripetto.com/"><img src="https://unpkg.com/tripetto/assets/banner.svg" alt="Tripetto"></a>
 
 Tripetto is a full-fledged form kit. Rapidly build and run smart flowing forms and surveys. Drop the kit in your codebase and use all of it or just the parts you need. The visual [**builder**](https://www.npmjs.com/package/tripetto) is for form building, and the [**runners**](https://www.npmjs.com/package/tripetto-runner-foundation) are for running those forms in different UI variants. It is entirely extendible and customizable. Anyone can build their own building [**blocks**](https://docs.tripetto.com/guide/blocks) (e.g., question types) or runner UI's.
 
