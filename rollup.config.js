@@ -59,21 +59,7 @@ export default [
                     imagemin
                         .buffer(Buffer.from(code), {
                             plugins: [
-                                require("imagemin-svgo")({
-                                    plugins: [
-                                        { cleanupAttrs: true },
-                                        { removeDoctype: true },
-                                        { removeXMLProcInst: true },
-                                        { removeComments: true },
-                                        { removeMetadata: true },
-                                        { removeTitle: true },
-                                        {
-                                            removeDesc: {
-                                                removeAny: true,
-                                            },
-                                        },
-                                    ],
-                                }),
+                                require("imagemin-svgo")(),
                             ],
                         })
                         .then((data) => ({

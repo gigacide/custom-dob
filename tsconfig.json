@@ -7,7 +7,6 @@
     "newLine": "LF",
     "strict": true,
     "experimentalDecorators": true,
-    "skipLibCheck": true,
     "noEmit": true,
     "noUnusedLocals": true
   },

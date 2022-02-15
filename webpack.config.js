@@ -59,29 +59,7 @@ const config = (type, target, test) => {
                 },
                 {
                     test: /\.svg$/,
-                    use: [
-                        "url-loader",
-                        {
-                            loader: "image-webpack-loader",
-                            options: {
-                                svgo: {
-                                    plugins: [
-                                        { cleanupAttrs: true },
-                                        { removeDoctype: true },
-                                        { removeXMLProcInst: true },
-                                        { removeComments: true },
-                                        { removeMetadata: true },
-                                        { removeTitle: true },
-                                        {
-                                            removeDesc: {
-                                                removeAny: true,
-                                            },
-                                        },
-                                    ],
-                                },
-                            },
-                        },
-                    ],
+                    use: ["url-loader", "image-webpack-loader"],
                 },
             ],
         },
