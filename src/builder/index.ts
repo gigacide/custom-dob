@@ -15,13 +15,13 @@ import {
 import { ExampleCondition } from "./condition";
 
 /** Assets */
-import ICON from "../../assets/icon.svg";
+import icon from "../../assets/icon.svg";
 
 @tripetto({
     type: "node",
     identifier: PACKAGE_NAME,
     version: PACKAGE_VERSION,
-    icon: ICON,
+    icon,
     get label() {
         return _("Boilerplate v%1", PACKAGE_VERSION);
     },
