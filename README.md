@@ -11,7 +11,7 @@ Tripetto is a full-fledged form kit. Rapidly build and run smart flowing forms a
 Perhaps one of the best things about Tripetto is that you can create your own building blocks. This boilerplate shows you how to do that. Use it as a starting point for your creativity.
 
 # Get started
-1. [Download](https://gitlab.com/tripetto/blocks/boilerplate/repository/master/archive.zip) or clone the [repository](https://gitlab.com/tripetto/blocks/boilerplate) to your local machine:
+1. [Download](https://gitlab.com/tripetto/blocks/boilerplate/-/archive/master/boilerplate-master.zip) or clone the [repository](https://gitlab.com/tripetto/blocks/boilerplate) to your local machine:
 ```bash
 $ git clone https://gitlab.com/tripetto/blocks/boilerplate.git
 ```
