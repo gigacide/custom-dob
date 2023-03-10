@@ -11,7 +11,7 @@ import {
     editor,
     slots,
     tripetto,
-} from "tripetto";
+} from "@tripetto/builder";
 import { ExampleCondition } from "./condition";
 
 /** Assets */

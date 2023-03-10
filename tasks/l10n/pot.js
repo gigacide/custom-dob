@@ -1,5 +1,5 @@
 const fs = require("fs");
-const tripetto = require("tripetto");
+const tripetto = require("@tripetto/builder");
 const package = require("../../package.json");
 let pot = fs.readFileSync("./translations/template.pot", "utf-8");
 

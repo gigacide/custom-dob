@@ -1,5 +1,5 @@
 import typescript from "@rollup/plugin-typescript";
-import { terser } from "rollup-plugin-terser";
+import terser from "@rollup/plugin-terser";
 import { visualizer } from "rollup-plugin-visualizer";
 import replace from "@rollup/plugin-replace";
 import pkg from "./package.json";
@@ -43,7 +43,7 @@ export default [
             },
         ],
         external: [
-            "tripetto"
+            "@tripetto/builder"
         ],
         plugins: [
             replacePlugin,
@@ -80,7 +80,7 @@ export default [
             },
         ],
         external: [
-            "tripetto-runner-foundation"
+            "@tripetto/runner"
         ],
         plugins: [
             replacePlugin,

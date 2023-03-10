@@ -2,11 +2,7 @@
 declare const PACKAGE_NAME: string;
 
 /** Dependencies */
-import {
-    ConditionBlock,
-    condition,
-    tripetto,
-} from "tripetto-runner-foundation";
+import { ConditionBlock, condition, tripetto } from "@tripetto/runner";
 
 @tripetto({
     type: "condition",

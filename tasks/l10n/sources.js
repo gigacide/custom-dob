@@ -1,5 +1,5 @@
 const fs = require("fs");
-const tripetto = require("tripetto");
+const tripetto = require("@tripetto/builder");
 const ignore = [];
 
 fs.mkdirSync("./translations/", { recursive: true });

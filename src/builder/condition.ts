@@ -3,7 +3,7 @@ declare const PACKAGE_NAME: string;
 declare const PACKAGE_VERSION: string;
 
 /** Dependencies */
-import { ConditionBlock, _, tripetto } from "tripetto";
+import { ConditionBlock, _, tripetto } from "@tripetto/builder";
 
 /** Assets */
 import ICON from "../../assets/icon.svg";

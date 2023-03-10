@@ -7,6 +7,15 @@ const banner = require("./tasks/banner/banner.js");
 const package = require("./package.json");
 const analyzer = require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
 
+console.log(
+    `UMD name: ${package.name
+        .substr(1)
+        .replace("/", "-")
+        .split("-")
+        .map((s) => s.charAt(0).toUpperCase() + s.substr(1))
+        .join("")}`
+);
+
 const config = (type, target, test) => {
     return {
         target: ["web", "es5"],
@@ -22,7 +31,7 @@ const config = (type, target, test) => {
                 target === "umd"
                     ? {
                           name: (
-                              package.name +
+                              package.name.substr(1).replace("/", "-") +
                               ((type === "builder" && "-builder") || "")
                           )
                               .split("-")
@@ -67,11 +76,12 @@ const config = (type, target, test) => {
             extensions: [".ts", ".js"],
         },
         externals: {
-            tripetto: target === "umd" ? "Tripetto" : "commonjs tripetto",
-            "tripetto-runner-foundation":
+            "@tripetto/builder":
+                target === "umd" ? "Tripetto" : "commonjs @tripetto/builder",
+            "@tripetto/runner":
                 target === "umd"
                     ? "TripettoRunner"
-                    : "commonjs tripetto-runner-foundation",
+                    : "commonjs @tripetto/runner",
         },
         optimization: {
             minimizer: [
