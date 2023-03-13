@@ -2,10 +2,18 @@
   "name": "@tripetto/block-boilerplate",
   "title": "Tripetto Block Boilerplate",
   "version": "1.0.0",
-  "description": "Boilerplate for creating a block for Tripetto.",
+  "description": "Boilerplate for creating a custom block package for Tripetto.",
   "keywords": [
     "tripetto",
-    "tripetto block"
+    "tripetto block",
+    "form kit",
+    "form builder",
+    "form builder SDK",
+    "form",
+    "forms",
+    "survey",
+    "surveys",
+    "block"
   ],
   "license": "MIT",
   "private": true,
