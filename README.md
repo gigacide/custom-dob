@@ -54,7 +54,7 @@ $ npm run publish:patch
 When your block is published, other people can install it and start using it inside the Tripetto form builder. All details on how to do that can be found [here](https://tripetto.com/sdk/docs/builder/integrate/guides/blocks/).
 
 ## 📖 Documentation
-Tripetto has practical, extensive documentation. Find everything you need on [tripetto.com/sdk/docs/](https://tripetto.com/sdk/docs/).
+Tripetto has practical, extensive documentation. Find everything you need at [tripetto.com/sdk/docs/](https://tripetto.com/sdk/docs/).
 
 ## 🆘 Support
 Run into issues or bugs? Report them [here](https://gitlab.com/tripetto/blocks/boilerplate/issues).
