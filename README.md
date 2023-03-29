@@ -6,7 +6,7 @@
 
 💸 Developing a custom form solution is tedious and expensive. Instead, use Tripetto and **save time and money!**
 
-🫶 Trusted and used by organizations **around the globe**, including [Fortune 500 companies](https://en.wikipedia.org/wiki/Fortune_500).
+🌎 Trusted and used by organizations **around the globe**, including [Fortune 500 companies](https://en.wikipedia.org/wiki/Fortune_500).
 
 ---
 
@@ -61,7 +61,7 @@ Run into issues or bugs? Report them [here](https://gitlab.com/tripetto/blocks/b
 
 Need help or assistance? Please go to our [support page](https://tripetto.com/sdk/support/). We're more than happy to help you.
 
-## 🪪 License
+## 💳 License
 Have a blast. [MIT](https://opensource.org/licenses/MIT).
 
 ## 👋 About us
