@@ -13,7 +13,6 @@ stages:
 package:
   stage: pack
   script:
-    - npm run make
     - npm pack
   except:
     - tags
