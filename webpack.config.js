@@ -7,15 +7,6 @@ const banner = require("./tasks/banner/banner.js");
 const package = require("./package.json");
 const analyzer = require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
 
-console.log(
-    `UMD name: ${package.name
-        .substr(1)
-        .replace("/", "-")
-        .split("-")
-        .map((s) => s.charAt(0).toUpperCase() + s.substr(1))
-        .join("")}`
-);
-
 const config = (type, target, test) => {
     return {
         target: ["web", "es5"],
