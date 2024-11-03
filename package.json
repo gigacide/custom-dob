@@ -1,5 +1,5 @@
 {
-  "name": "@tripetto/block-custom-dob",
+  "name": "block-custom-dob",
   "title": "Tripetto Block DOB",
   "version": "1.0.0",
   "description": "Boilerplate for creating a custom block package for Tripetto.",
