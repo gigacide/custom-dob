@@ -16,7 +16,7 @@
     "block"
   ],
   "license": "MIT",
-  "private": true,
+  "private": false,
   "homepage": "https://gitlab.com/tripetto/blocks/boilerplate",
   "author": {
     "name": "Mark van den Brink",
